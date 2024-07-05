@@ -1,0 +1,381 @@
+:root{
+
+    --blanco:  #ffffff;
+    --oscuro: #000000;
+    --primario: #FFC107; 
+    --amarillou:#e1cf42;
+    --verde:  #406626;
+    --secundario: #0097A7;
+    --gris: #757575;
+    --grisClaro: #DFE9F3;
+    --verdeu: #61806c;
+
+}
+
+/*Globales*/
+html{
+    font-size:  62.5%;
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+.line img{
+    display: block;
+    margin: auto;
+    height: 5.629rem;
+    width: 100%;
+}
+
+body{
+    font-size: 16px; /*1rem= a 10px*/
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--oscuro);
+}
+.hero{
+  background-image: url(../img/principal.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 45rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.contenedor{
+    max-width: 130rem;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+.sombra{
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(102,101,102,0.5);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(102,101,102,0.5);
+    box-shadow: 0px 5px 15px 0px rgba(102,101,102,0.5);
+    padding: 2rem;
+    border-radius: 1rem;
+    background-image: linear-gradient(to top,var(--grisClaro) 10% ,var(--blanco)80%)
+}
+@media (min-width:768px){
+.nave{
+    display:grid;
+    align-items:self-start; 
+    grid-template-columns: 10% 90%;
+    background-color: var(--gris);
+}
+}
+/*Tipografia*/
+h1{
+    text-align: center;
+    color: var(--blanco);
+    font-size: 7rem;
+   font-weight: 400;
+   
+}
+
+h2{
+font-size: 2rem;
+}
+
+h3{
+font-size: 1.5rem;
+}
+h4{
+  font-size: 2.5rem;
+  color: var(--blanco);
+}
+h1,h2,h3,h4{
+    text-align: center;
+}
+/*Navegacion*/
+.nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.link{
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+}
+
+.link::before, .link::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff0000;
+    transform: scaleX(0);
+    transition: transform 0.25s;
+}
+
+.link::before{
+    top: -3px;
+    transform-origin: left;
+}
+
+.link::after{
+    bottom: -3px;
+    transform-origin: right;
+}
+
+.link:hover::before,
+.link:hover::after
+{
+    transform: scaleX(1);
+}
+.ubi{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    background-color: #5bd5e2;
+}
+.ubi p{
+    color: var(--oscuro);
+    font-size:3rem;
+    font-weight: 600;
+}
+.cajas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width:100% ;
+    column-gap: 3rem;
+}
+.cajas p{
+    color: var(--blanco);
+    width: 100%;
+    text-align: center;
+}
+.valores p{
+    color: var(--blanco);
+    width: 100%;
+    text-align: center;
+    padding: 0 20rem;
+}
+footer{
+    row-gap: 0;
+    background-color:rgb(30, 78, 117);
+}
+.conclusion{
+background-color:rgb(255, 255, 255);
+text-align: center;
+width: 100%;
+}
+.contactanos{
+    background-color: rgb(236, 152, 56);
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    width:100% ;
+    column-gap: 3rem;
+}
+.contactanos h3{
+    font-size: 3.5rem;
+}
+.red{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.num {
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+ 
+}
+.derecho{
+    background-color: #020202;
+    width: 100%;
+}
+/*Estilos de Claudia  */
+
+main h2{
+    color: #fff;
+}
+.hero-clau{
+    background-image: url(../img/LogoLic.\ Blanco.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.clau{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.card {
+    width: 300px;
+    padding: 10px;
+    background-size: 200% 200%;
+    border-radius: 12px;
+  }
+  
+  .card-int {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    font-size: 14px;
+    border-radius: 6px;
+    background-color: white;
+  }
+  
+  .img {
+    width: 100%;
+    height: 175px;
+    background-color: pink;
+  }
+  
+  .title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .card-data {
+    padding: 20px;
+    font-size: 14px;
+  }
+  
+  .card__span {
+    font-size: 11px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+  }
+/*Estilos de fabi*/
+  .fabi{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #406626;
+}
+.FabiVelt h2{
+    color: #fff;
+}
+.card2 {
+  padding: 10px;
+  max-width: 260px;
+  background-color: rgb(255, 255, 255);
+  
+
+}
+
+ .heade {
+  margin-top: 0.5rem;
+}
+
+.ima {
+  width: 100%;
+  height: 150px;
+  border-radius: 4px;
+  background-color: rgb(205, 235, 255);
+  padding: 9px;
+}
+
+.targ {
+  text-transform: capitalize;
+  background-color: rgba(0, 0, 0, 0.425);
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: #fff;
+  
+}
+
+.tie {
+  display: block;
+  font-size: 1.25rem;
+  line-height: 1.35rem;
+  font-weight: 600;
+  padding-bottom: 5px;
+  padding-top: 14px;
+}
+
+.descripcion {
+  line-height: 1.375;
+}
+  
+/*Estilos de Alteza*/
+.corporativo h2{
+    color: #fff;
+}
+.corpo{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #427478;
+}
+.project-info {
+    padding: 100px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    top: -50px;
+  }
+  
+  .project-title {
+    font-weight: 500;
+    font-size: 1.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: black;
+  }
+  
+  .luz {
+    font-size: 0.9em;
+  }
+  
+  .flexi {
+    display: grid;
+  }
+  
+  .targe {
+    color: grey;
+  }
+  
+  
+  .card3 {
+    background-color: white;
+    color: black;
+    width: 300px;
+    max-height: 330px;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+  
+  .card3-img {
+    position: relative;
+    top: -20px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Change the .card-img div to .card-img img to use img*/
+  .card3-img a,
+  .card3-img div {
+    height: 150px;
+    width: 90%;
+    /* Change this width here to change the width of the color/image */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  
+  .card3-imgs {
+    transition: all 0.5s;
+  }
+  
